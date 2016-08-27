@@ -1,11 +1,21 @@
-<div ng-show="loading">Loading...</div>
 <div ng-hide="loading">
-   <div ng-repeat="post in posts">
-      <h1>{{post.name}}</h1>
-      <p>{{post.content}}</p>
-      <p>
-         <a href="#/comments/{{post.id}}"> {{post.comments.length}} comments </a>
-      </p>
-      <hr>
-   </div>
+  <section class="main">
+    <ul class="grid">
+      <li class="head--grid">
+        <span> Team name </span>
+        <span> Back odds </span>
+        <span> Lay odds </span>
+      </li>
+    </ul>
+    <ul>
+     <li ng-repeat="post in posts" class="content--grid">
+       <span>
+         <a href="#/comments/{{post.id}}">{{post.comments.length}} icon</a>
+         {{post.name}}
+       </span>
+       <span> {{post.content}} </span>
+       <span> 5 </span>
+     </li>
+    </ul>
+  </section>
 </div>

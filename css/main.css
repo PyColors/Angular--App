@@ -1,0 +1,243 @@
+
+ /* ==========================================================================
+    Custom Reset CSS
+    ========================================================================== */
+    html, body, div, span, ul, li {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+
+
+ /* ==========================================================================
+    General
+    ========================================================================== */
+    body {
+      font-family: 'Helvetica', 'Arial', sans serif;
+      height: 100%;
+            background: #3023ae;
+            background: -moz-linear-gradient(-45deg,  #3023ae 0%, #c86dd7 100%);
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3023ae), color-stop(100%,#c86dd7));
+            background: -webkit-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
+            background: -o-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
+            background: -ms-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
+            background: linear-gradient(135deg,  #3023ae 0%,#c86dd7 100%);
+            background-attachment: fixed;
+    }
+
+    .loader {
+      font-size: 10px;
+      margin: 50px auto;
+      text-indent: -9999em;
+      width: 11em;
+      height: 11em;
+      border-radius: 50%;
+      background: #fff;
+      background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      position: relative;
+      -webkit-animation: load3 1.4s infinite linear;
+      animation: load3 1.4s infinite linear;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+
+    .loader:before {
+      width: 50%;
+      height: 50%;
+      background: #fff;
+      border-radius: 100% 0 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+    }
+
+    .loader:after {
+      background: #eee;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .main {
+      width: 65%;
+      border: solid 1px #ccc;
+      background: #fff;
+      margin: 2% auto 0;
+      font-size: 0.8em;
+      animation: animationFrames ease 1s;
+      animation-iteration-count: 1;
+      transform-origin: 50% 50%;
+      animation-fill-mode:forwards; /*when the spec is finished*/
+      -webkit-animation: animationFrames ease 1s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-transform-origin: 50% 50%;
+      -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+    }
+
+    .head--grid {
+      display: table;
+      width: 100%;
+      color: #fff;
+      background: #222;
+    }
+
+    .head--grid span {
+      width: 33%;
+      display: table-cell;
+      text-align: center;
+      padding: 1.5% 0;
+    }
+
+    .content--grid {
+      display: table;
+      width: 100%;
+      border-top: 1px #eee solid;
+    }
+
+    .content--grid:nth-child(2n+2) {
+      background: #fafaf8;
+    }
+
+    .content--grid span {
+      line-height: 1.2;
+      width: 33%;
+      display: table-cell;
+      text-align: center;
+      padding: 1% 0;
+      vertical-align: middle;
+    }
+
+
+/* ==========================================================================
+ Animation
+ ========================================================================== */
+
+/* loader */
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Section Main */
+@keyframes animationFrames {
+  0% {
+    opacity:0;
+    transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px);
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    opacity:0;
+    -webkit-transform:  translate(0px,-25px);
+  }
+  100% {
+    opacity:1;
+    -webkit-transform:  translate(0px,0px);
+  }
+}
+
+
+/* ==========================================================================
+ Media Queries
+ ========================================================================== */
+
+ /* Large screen
+    This is for screens greater than 768px
+ */
+ @media screen and (min-width: 768px) {
+
+ }
+
+
+ /* Medium screen
+    This is for screens greater than 320px and equal to or smaller to 768px
+ */
+ @media (min-width: 320px) and (max-width: 768px) {
+
+   .content--grid {
+     padding: 1% 0;
+     display: inherit;
+   }
+
+   .content--grid span {
+     padding: 2% 0;
+   }
+
+   .content--grid span:nth-child(1),
+   .content--grid span:nth-child(2),
+   .content--grid span:nth-child(3) {
+     display: inline-block;
+     width: 49%;
+   }
+
+   .head--grid {
+     display: none;
+   }
+
+ }
+
+
+ /* Narrow screen
+    This is for screens 320px wide and smaller
+ */
+ @media screen and (max-width: 320px) {
+
+   .content--grid span:nth-child(1),
+   .content--grid span:nth-child(2),
+   .content--grid span:nth-child(3) {
+     display: block;
+     width: 100%;
+   }
+
+   .head--grid {
+     display: none;
+   }
+
+ }
