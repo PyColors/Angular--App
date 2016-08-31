@@ -1,23 +1,22 @@
 <div ng-hide="loading">
-  <section class="main">
-    <ul class="grid">
-      <li class="head--grid">
-        <span> Team name <br> <input type="text" placeholder="search" ng-model="search.name" class="search"> </span>
-        <span> Back odds <br> <input type="text" placeholder="search" ng-model="search.price" class="search"> </span>
-        <span> Lay odds <br> <input type="text" placeholder="search" ng-model="search.layprice" class="search"> </span>
-      </li>
-    </ul>
-
-    <ul>
-     <li ng-repeat="post in posts | filter:search" class="content--grid">
-       <span>
-         <a class="chart" href="#/charts/{{post.id}}" title="Plot a chart of price movement over time"></a>
-         <br>
-         {{post.name}}
-       </span>
-       <span> {{post.price}} <br> {{post.size}} </span>
-       <span> {{post.layprice}} <br> {{post.laysize}} </span>
-     </li>
-    </ul>
-  </section>
+   <section class="main">
+      <ul class="grid">
+         <li class="head--grid">
+            <span> Team name <br> <input type="text" placeholder="search" ng-model="search.name" class="search"> </span>
+            <span> Back odds <br> <input type="text" placeholder="search" ng-model="search.price" class="search"> </span>
+            <span> Lay odds <br> <input type="text" placeholder="search" ng-model="search.layprice" class="search"> </span>
+         </li>
+      </ul>
+      <ul>
+         <li ng-repeat="post in posts | filter:search" class="content--grid">
+            <span>
+            <a class="chart" href="#/charts/{{post.id}}" title="Plot a chart of price movement over time"></a>
+            <br>
+            {{post.name}}
+            </span>
+            <span> {{post.price}} <br> {{post.size}} </span>
+            <span> {{post.layprice}} <br> {{post.laysize}} </span>
+         </li>
+      </ul>
+   </section>
 </div>

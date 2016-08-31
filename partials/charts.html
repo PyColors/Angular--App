@@ -1,18 +1,12 @@
 <div ng-hide="loading">
     <section class="main center">
       <a href="#/" class="back">Back to the best odds</a>
-    <h1>A chart of price movement over time</h1>
-   <h2> {{title}} </h2>
+   <h1> {{title}} </h1>
    <div ng-repeat="chart in charts">
       <article>
          <p>Total matched on this event: <strong>{{chart.matched}}</strong></p>
          <p>Last price matched: <strong>{{chart.lastprice}}</strong></p>
       </article>
-          </div>
+    </div>
  </section>
 </div>
-
-
-<script>
-
-</script>
