@@ -10,11 +10,11 @@
     <ul>
      <li ng-repeat="post in posts" class="content--grid">
        <span>
-         <a href="#/comments/{{post.id}}">{{post.comments.length}} icon</a>
+         <a class="chart" href="#/comments/{{post.id}}" title="Plot a chart of price movement over time">{{post.comments.length}} &nbsp </a>
          {{post.name}}
        </span>
-       <span> {{post.content}} </span>
-       <span> 5 </span>
+       <span> {{post.price}} <br> {{post.size}} </span>
+       <span> {{post.layprice}} <br> {{post.laysize}} </span>
      </li>
     </ul>
   </section>

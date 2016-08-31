@@ -19,7 +19,7 @@ app.factory('Post', function($http, $q, $timeout) {
                             deferred.resolve(factory.posts);
                         }, 2000)
 
-                    }).error(function(data, statu) {
+                    }).error(function(data, status) {
                         deferred.reject('Sorry...');
                     });
             }

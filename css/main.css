@@ -27,14 +27,13 @@
     body {
       font-family: 'Helvetica', 'Arial', sans serif;
       height: 100%;
-            background: #3023ae;
-            background: -moz-linear-gradient(-45deg,  #3023ae 0%, #c86dd7 100%);
-            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3023ae), color-stop(100%,#c86dd7));
-            background: -webkit-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
-            background: -o-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
-            background: -ms-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
-            background: linear-gradient(135deg,  #3023ae 0%,#c86dd7 100%);
-            background-attachment: fixed;
+      background: #3023ae;
+      background-attachment: fixed;
+      background-image: url('../images/bg.jpg');
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
     }
 
     .loader {
@@ -86,9 +85,10 @@
     .main {
       width: 65%;
       border: solid 1px #ccc;
-      background: #fff;
+      background: rgba(4, 102, 41, 0.5);
       margin: 2% auto 0;
       font-size: 0.8em;
+      color: #fff;
       animation: animationFrames ease 1s;
       animation-iteration-count: 1;
       transform-origin: 50% 50%;
@@ -103,7 +103,6 @@
       display: table;
       width: 100%;
       color: #fff;
-      background: #222;
     }
 
     .head--grid span {
@@ -130,6 +129,14 @@
       text-align: center;
       padding: 1% 0;
       vertical-align: middle;
+    }
+
+    .content--grid .chart {
+      vertical-align: middle;
+      background: url("../images/chart.png");
+      width: 24px;
+      height: 24px;
+      display: inline-block;
     }
 
 
