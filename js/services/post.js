@@ -6,7 +6,7 @@ app.factory('Post', function($http, $q, $timeout) {
 
     var factory = {
         posts: false,
-        getPosts: function() {
+        find: function() {
             var deferred = $q.defer();
             /* Optimisation: call Json just once */
             if (factory.posts !== false) {
@@ -25,10 +25,10 @@ app.factory('Post', function($http, $q, $timeout) {
             }
             return deferred.promise;
         },
-        getPost: function(id) {
+        get: function(id) {
             var deferred = $q.defer();
             var post = {};
-            var posts = factory.getPosts().then(function(posts) {
+            var posts = factory.find().then(function(posts) {
                 angular.forEach(posts, function(value, key) {
                     if (value.id == id) {
                         post = value

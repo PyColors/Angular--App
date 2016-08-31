@@ -6,8 +6,8 @@ app.config(function($routeProvider) {
     .when('/', { templateUrl: 'partials/home.html',
                  controller: 'PostsCtrl'})
 
-    .when('/comments/:id', { templateUrl: 'partials/comments.html',
-                             controller: 'CommentsCtrl'})
+    .when('/charts/:id', { templateUrl: 'partials/charts.html',
+                             controller: 'ChartsCtrl'})
 
     .otherwise({redirectTo : '/'});
 

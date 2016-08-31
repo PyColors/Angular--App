@@ -2,15 +2,17 @@
   <section class="main">
     <ul class="grid">
       <li class="head--grid">
-        <span> Team name </span>
-        <span> Back odds </span>
-        <span> Lay odds </span>
+        <span> Team name <br> <input type="text" placeholder="search" ng-model="search.name" class="search"> </span>
+        <span> Back odds <br> <input type="text" placeholder="search" ng-model="search.price" class="search"> </span>
+        <span> Lay odds <br> <input type="text" placeholder="search" ng-model="search.layprice" class="search"> </span>
       </li>
     </ul>
+
     <ul>
-     <li ng-repeat="post in posts" class="content--grid">
+     <li ng-repeat="post in posts | filter:search" class="content--grid">
        <span>
-         <a class="chart" href="#/comments/{{post.id}}" title="Plot a chart of price movement over time">{{post.comments.length}} &nbsp </a>
+         <a class="chart" href="#/charts/{{post.id}}" title="Plot a chart of price movement over time"></a>
+         <br>
          {{post.name}}
        </span>
        <span> {{post.price}} <br> {{post.size}} </span>
