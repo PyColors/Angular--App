@@ -5,7 +5,7 @@ app.controller('PostsCtrl', function ($scope, $rootScope, Post) {
         $scope.posts = posts;
         $scope.search = {}
     }, function(msg) {
-        alert(mstg);
+        alert(msg);
     })
 
 })
