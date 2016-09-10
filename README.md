@@ -1,4 +1,8 @@
-"# Angular--App"
+# Angular App
+
+<p align="center">
+    <img src="http://pycolors.com/v2/angular.png" alt="Angular" width="320" height="320"/>
+</p>
 
 Run App 
 
