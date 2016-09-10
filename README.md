@@ -1,7 +1,7 @@
 # Angular App
 
 <p align="center">
-    <img src="http://pycolors.com/v2/angular.png" alt="Angular" width="150" height="150"/>
+    <img src="http://pycolors.com/v2/angular.png" alt="Angular" width="190" height="190"/>
 </p>
 
 Run App 
