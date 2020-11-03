@@ -12,4 +12,4 @@
 
 3. Run the index.html file with a local server
 
-[Demo](http://pycolors.com/v2/angular-app)
+## [Demo](http://pycolors.com/v2/angular-app)
